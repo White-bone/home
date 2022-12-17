@@ -3,27 +3,34 @@
   <head>
     <title>Notepad</title>
     <style>
-
+      textarea {
+        resize: none;
+        margin: auto;
+        display: block;
+        text-align: justify;
+        overflow: hidden;
+      }
       /* Add some styles for the full-screen mode */
       textarea.full-screen {
+            
         font-family: "Chivo Mono", sans-serif;
         color: #ffffff;
-        width: 100%;
+        width: 98%;
         height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-  background-color: #23211f;
- /* Add the border around the background */
-  border: 18px solid #3d3935;
+        position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+        background-color: #23211f;
+        /* Add the border around the background */
+        border: 18px solid #3d3935;
+            
       }
     </style>
+    
   </head>
   <body>
-    <h1>Notepad</h1>
     <textarea id="note" class="full-screen"></textarea>
-    <button id="full-screen">Toggle full-screen</button>
 
     <!-- Add the JavaScript code here -->
     <script>
@@ -33,6 +40,7 @@
       fullScreenButton.addEventListener('click', function() {
         // Toggle the full-screen class on the textarea
         textarea.classList.toggle('full-screen');
+        
       });
     </script>
   </body>
