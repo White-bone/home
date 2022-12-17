@@ -5,27 +5,26 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <style>
-a:link,
-a:visited {
-  background-color: #3c4f7a;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-//
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  margin: 10px; /* add space between the boxes */
-}
+      a:link,
+      a:visited {
+        background-color: #3c4f7a;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin: 10px; /* add space between the boxes */
+      }
 
-}
+      a:hover,
+      a:active {
+        background-color:#00ccff;
+      }
 
-a:hover, a:active {
-  background-color: red;
-}
       body {
         color: #6bd0ff;
         font-family: "Chivo Mono", sans-serif;
@@ -37,7 +36,9 @@ a:hover, a:active {
     <div class="container">
       <header>
         <div>
-          <h1><p>Bone's site</p></h1>
+          <h1>
+            <p>Bone's site</p>
+          </h1>
         </div>
       </header>
 
@@ -46,12 +47,29 @@ a:hover, a:active {
           <!-- Navigational links go here -->
           <h3>Games</h3>
           <ul>
-            <li><a href="/home/javascript/Calculator/index.html">Here's a calculator</a></li>
-            <li><a href="/test/Bookmarklets/index.html">List of useful bookmarklets :D</a></li>
-            <li><a href="/test/games/index.html">Just a couple games</a></li>
-            <li><a href="/test/litesite/index.html">Clock tab</a></li>
+            <li>
+              <a href="#" onclick="toggleInfo(this)">Here's a calculator</a>
+              <div style="display: none">Additional information about the calculator</div>
+            </li>
+            <li>
+              <a href="#" onclick="toggleInfo(this)">List of useful bookmarklets :D</a>
+              <div style="display: none">Additional information about the bookmarklets</div>
+            </li>
+            <li>
+              <a href="google.com" onclick="toggleInfo(this)">Just a couple games</a>
+              <div style="display: none">Additional information about the games</div>
+            </li>
+            <li>
+              <a href="#" onclick="toggleInfo(this)">Clock tab</a>
+              <div style="display: none">Additional information about the clock tab</div>
+            </li>
           </ul>
         </nav>
+<h3>Useful Utilities and stuff<h3>
+       <li>
+              <a href="#" onclick="toggleInfo(this)">Here's a notepad</a>
+              <div style="display: none">Additional information about the calculator</div>
+            </li>
 
         <div class="content">
           <!-- Your website content goes here -->
@@ -62,11 +80,4 @@ a:hover, a:active {
               <meta name="viewport" content="width=device-width, initial-scale=1">
               <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
               <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-              <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-              <link rel="stylesheet" type="text/css" href="../style2.css">
-            </head>
-
-            <div class="stuff" id="stuff">
-              <h3>Useful Utilities and stuff</h3>
-              <ul>
-                <li><a href="/home/javascript/Notepad/index.html">Notepad :D</a></li
+              <link href="bootstrap/bootstrap.min
