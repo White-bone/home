@@ -6,34 +6,233 @@
     <link rel="stylesheet" href="/home/styles.css">
   </head>
   <body>
-    <script>
-      var x, y;
-      var kern = 20;
-      var flag = 0;
-      var message = "Random cool ";
-      message = message.split("");
-      var xpos = new Array();
-      for (i = 0; i < message.length; i++) {
-        xpos[i] = -50;
-      }
-      var ypos = new Array();
-      for (i = 0; i < message.length; i++) {
-        ypos[i] = -50;
-      }
-      function makebanner() {
-        if (flag == 1) {
-          for (i = message.length - 1; i >= 1; i--) {
-            xpos[i] = xpos[i - 1] + kern;
-            ypos[i] = ypos[i - 1];
-          }
-          xpos[0] = x + kern;
-          ypos[0] = y;
-          for (i = 0; i < message.length; i++) {
-            if (document.getElementById) {
-              var thisspan = document.getElementById("span" + i).style;
-            } else {
-              var thisspan = eval((document.layers) ? "document.span" + i : "span" + (i) + ".style");
-            }
-            if (thisspan.posLeft) {
-              thisspan.posLeft = xpos[i];
-              thisspan.posTop = ypos[i];
+  
+
+
+
+var x,y
+var kern=20 
+var flag=0
+var message="Random cool "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<message.length;i++) {
+	xpos[i]=-50
+	}
+var ypos=new Array()
+for (i=0;i<message.length;i++) {
+	ypos[i]=-50
+	}
+function handlerMM(e){
+	x = (e) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (e) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+	}
+function makebanner() {
+	if (flag==1) {
+		for (i=message.length-1; i>=1; i--) {
+			xpos[i]=xpos[i-1]+kern
+			ypos[i]=ypos[i-1]
+			}
+		xpos[0]=x+kern
+		ypos[0]=y
+		for (i=0; i<message.length; i++) {
+			if (document.getElementById) {
+				var thisspan = document.getElementById("span"+i).style
+				} else {
+				var thisspan = eval((document.layers)?"document.span"+i:"span"+(i)+".style")
+				}
+			if (thisspan.posLeft) {
+				thisspan.posLeft=xpos[i]
+				thisspan.posTop=ypos[i]
+				}
+			if (!thisspan.posLeft) {
+				thisspan.left=xpos[i]
+				thisspan.top=ypos[i]
+				}
+			}
+		}
+		var timer=setTimeout("makebanner()",30)
+	}
+window.onload=makebanner;
+</script>
+
+
+
+<script language="JavaScript1.2">
+for (i=0;i<message.length;i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>")
+document.write(message[i])
+document.write("</span>")
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+</script>
+
+<style type="text/css">
+<!--
+.spanstyle {
+position:absolute;
+visibility:visible;
+top:-50px;
+font-size:20pt;
+font-family:Verdana;
+font-weight:italic;
+color:808066;
+}
+BODY {
+width:100%;overflow-x:hidden;overflow-y:scroll;
+}
+-->
+</style>
+<script language="JavaScript1.2">
+
+var x,y
+var kern=20 
+var flag=0
+var message="Random Cool web stuff I've compiled"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<message.length;i++) {
+	xpos[i]=-50
+	}
+var ypos=new Array()
+for (i=0;i<message.length;i++) {
+	ypos[i]=-50
+	}
+function handlerMM(e){
+	x = (e) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (e) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+	}
+function makebanner() {
+	if (flag==1) {
+		for (i=message.length-1; i>=1; i--) {
+			xpos[i]=xpos[i-1]+kern
+			ypos[i]=ypos[i-1]
+			}
+		xpos[0]=x+kern
+		ypos[0]=y
+		for (i=0; i<message.length; i++) {
+			if (document.getElementById) {
+				var thisspan = document.getElementById("span"+i).style
+				} else {
+				var thisspan = eval((document.layers)?"document.span"+i:"span"+(i)+".style")
+				}
+			if (thisspan.posLeft) {
+				thisspan.posLeft=xpos[i]
+				thisspan.posTop=ypos[i]
+				}
+			if (!thisspan.posLeft) {
+				thisspan.left=xpos[i]
+				thisspan.top=ypos[i]
+				}
+			}
+		}
+		var timer=setTimeout("makebanner()",12)
+	}
+window.onload=makebanner;
+</script>
+
+
+
+<script language="JavaScript1.2">
+for (i=0;i<message.length;i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>")
+document.write(message[i])
+document.write("</span>")
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+
+
+
+
+</script></body>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="media-queries.css">
+    <meta name="viewport" content="width=device-width">
+
+  </head>
+
+  <body>
+    <div class="container">
+    <header>
+      <div>
+        <h2><p>Bone's site</p></h2>
+        </span>
+      </div>
+    </header>
+
+
+<section>
+
+  <nav>
+
+
+  </nav>
+
+
+            <div class="content">
+              <!DOCTYPE html>
+              <html lang="en">
+
+              <head>
+
+                  <meta charset='utf-8'>
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+                  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                  <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+                  <link rel="stylesheet" type="text/css" href="../style2.css">
+              </head>
+
+
+                  <div class="stuff" id="stuff">
+                      </ul>
+
+                        <h3>Games</h3>
+                        <ul>
+                          <li><a href="/test/javascript/Notepad/index.html">Notepad :D</a></li>
+                          <li><a href="/test/javascript/Calculator/index.html">Here's a calculator</a></li>
+				    <li><a href="/test/Bookmarklets/index.html">List of useful bookmarklets :D</a></li>
+					    <li><a href="/test/games/index.html">Just a couple games</a></li>
+									    <li><a href="/test/litesite/index.html">Useful tool to keep chrome open while being liteweight</a></li>
+                        </ul>
+                  </div>
+                  <hr>
+
+                  </script>
+              </body>
+
+              </html>
+          </div>
+        </section>
+
+    </div>
+
+
+
+<br /><a target="_blank" href="http://free-web-tools.com/category/codes/javascript/" style="text-decoration:none;bottom:0;left:20px;font-size:20pt;color:gray;position:absolute">javascript code</a><a target="_blank" href="http://www.javascriptbestcodes.com" style="font-size: 20pt; text-decoration: none">I got a lot of code from here</a>
+<br>
+
+<link rel="stylesheet" href="../assets/css/tabcloak.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+
+
+</div>
+  </body>
+
+</html>
